@@ -5,5 +5,5 @@ import { Component } from '@angular/core';
   templateUrl: './education.component.html'
 })
 export class EducationComponent {
-  private simplevariable : string = "SimpleVariable"
+  public simplevariable : string = "SimpleVariable"
 }
