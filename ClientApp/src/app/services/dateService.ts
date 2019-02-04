@@ -1,8 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs/Observable";
-import { ServerResponse } from "http";
-import { extend } from "webdriver-js-extender";
 
 @Injectable()
 export class DateService {
@@ -33,4 +31,5 @@ class ServerDate implements IServerResponse{
 interface IServerResponse {
   currentDate: string;
   currentTime: string;
+
 }
