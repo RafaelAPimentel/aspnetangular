@@ -10,10 +10,7 @@ export class DateService {
   private date: ServerDate;
 
   public getCurrentDate(): Date {
-    this.getDateFromServer().subscribe((result) => {
-      this.date.currentDate = result.currentDate;
-      this.date.currentTime = result.currentTime;
-    });
+
     return new Date();
   }
 
