@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from './common/common.module'
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -11,7 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { EducationComponent } from './education/education.component';
 import { SkillsComponent } from './skills/skills.component';
 import { DateService } from './services/dateService';
-import { SearchComponent } from './search/search.component' 
+import { SearchComponent } from './search/search.component'
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { SearchComponent } from './search/search.component'
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
+    HttpModule,
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -33,9 +35,10 @@ import { SearchComponent } from './search/search.component'
       { path: 'skills', component: SkillsComponent },
       { path: 'search', component: SearchComponent }
     ]),
+    CommonModule
     
   ],
-  providers: [DateService,CommonModule],
+  providers: [DateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

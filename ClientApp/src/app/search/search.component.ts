@@ -11,7 +11,8 @@ import { ImageResult } from '../common/models/bingSearchResponse';
 export class SearchComponent {
     searchResults: ImageResult[] | null;
     isSearching = false;
-    constructor(private cognitiveService : CognitiveService) { }
+    
+    constructor(private cognitiveService : CognitiveService){}
     
     search(searchTerm: string) {
         this.searchResults = null;

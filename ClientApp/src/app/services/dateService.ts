@@ -10,12 +10,7 @@ export class DateService {
   private date: ServerDate;
 
   public getCurrentDate(): Date {
-
     return new Date();
-  }
-
-  public getDateFromServer(): Observable<IServerResponse>{
-    return this.http.get<IServerResponse>("/serverTime");
   }
 } 
 
