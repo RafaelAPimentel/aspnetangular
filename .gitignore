@@ -11,7 +11,8 @@
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
-
+tasks.json
+launch.json
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
